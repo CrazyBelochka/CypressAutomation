@@ -10,6 +10,7 @@ module.exports = defineConfig({
     
     setupNodeEvents(on, config) {
       getspecFiles("./cypress/e2e", true)
+      return config;
       // implement node event listeners here
     },
   },

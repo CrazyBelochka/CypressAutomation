@@ -1,4 +1,4 @@
-describe('My First Test', () => {
+describe('My Second Test', () => {
   it('Verify title of the page pozitive', () => 
   {
     cy.visit('https://cabinet3.nationalpost.ru/')
@@ -8,12 +8,47 @@ describe('My First Test', () => {
   })
 
 
-  it('Print few worlds', () =>
+  it('Print few words', () =>
   {
     cy.visit('https://cabinet3.nationalpost.ru/')
     cy.get('input[type=text]').type('Web2')
     cy.get('input[type=password]').type('Sj123456')
     cy.contains('Войти').click()
+    cy.contains('Создать').click()
+    cy.get('select').eq(0).select('(1308) №Контракт 2 от 08/10/19')
+    cy.get('select').eq(1).select('Бандероль заказная с уведомлением 100г-500г')
+    cy.get('button[type = "submit"]').click()
+
+    cy.contains('Создать').click()
+    cy.get('select').eq(0).select('(1308) №Контракт 2 от 08/10/19')
+    cy.get('select').eq(1).select('Бандероль заказная с уведомлением 100г-500г')
+    cy.get('button[type = "submit"]').click()
+
+    cy.contains('Создать').click()
+    cy.get('select').eq(0).select('(1308) №Контракт 2 от 08/10/19')
+    cy.get('select').eq(1).select('Бандероль заказная с уведомлением 100г-500г')
+    cy.get('button[type = "submit"]').click()
+
+    cy.contains('Создать').click()
+    cy.get('select').eq(0).select('(1308) №Контракт 2 от 08/10/19')
+    cy.get('select').eq(1).select('Бандероль заказная с уведомлением 100г-500г')
+    cy.get('button[type = "submit"]').click()
+
+    cy.contains('Создать').click()
+    cy.get('select').eq(0).select('(1308) №Контракт 2 от 08/10/19')
+    cy.get('select').eq(1).select('Бандероль заказная с уведомлением 100г-500г')
+    cy.get('button[type = "submit"]').click()
+
+    cy.contains('Создать').click()
+    cy.get('select').eq(0).select('(1308) №Контракт 2 от 08/10/19')
+    cy.get('select').eq(1).select('Бандероль заказная с уведомлением 100г-500г')
+    cy.get('button[type = "submit"]').click()
+
+    cy.contains('Создать').click()
+    cy.get('select').eq(0).select('(1308) №Контракт 2 от 08/10/19')
+    cy.get('select').eq(1).select('Бандероль заказная с уведомлением 100г-500г')
+    cy.get('button[type = "submit"]').click()
+
     cy.contains('Создать').click()
     cy.get('select').eq(0).select('(1308) №Контракт 2 от 08/10/19')
     cy.get('select').eq(1).select('Бандероль заказная с уведомлением 100г-500г')

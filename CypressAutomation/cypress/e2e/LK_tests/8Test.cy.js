@@ -1,0 +1,102 @@
+describe('My 8 Test', () => {
+    it('Verify title of the page pozitive', () => 
+    {
+      cy.visit('https://cabinet3.nationalpost.ru/')
+      cy.title().should('eq','Кабинет клиента НПС')
+  
+  
+    })
+  
+  
+    it('Print few worlds', () =>
+    {
+      cy.visit('https://cabinet3.nationalpost.ru/')
+      cy.get('input[type=text]').type('Web2')
+      cy.get('input[type=password]').type('Sj123456')
+      cy.contains('Войти').click()
+      cy.contains('Создать').click()
+      cy.get('select').eq(0).select('(1308) №Контракт 2 от 08/10/19')
+      cy.get('select').eq(1).select('Бандероль заказная с уведомлением 100г-500г')
+      cy.get('button[type = "submit"]').click()
+    })
+  
+    it('Works with operations', () =>
+    {
+      cy.visit('https://cabinet3.nationalpost.ru/')
+      cy.get('input[type=text]').type('Web2')
+      cy.get('input[type=password]').type('Sj123456')
+      cy.contains('Войти').click()
+      cy.get('input[type=text]').eq(2).type('9512238{enter}')
+      cy.get('button[type = "button"]').eq(11).click()
+      cy.contains('Добавить отправление').click()
+      cy.get('input[type=text]').eq(5).type('Ромашка{enter}')
+      cy.get('input[class]').eq(12).type('Широкая')
+      cy.get('input[class]').eq(13).type('3')
+      cy.get('input[type=text]').eq(6).type('ООО')
+      cy.contains('ООО Тестовая компания номер один').click()
+      cy.get('button[type = "submit"]').eq(0).click()
+
+      cy.get('button[type = "button"]').eq(11).click()
+      cy.contains('Добавить отправление').click()
+      cy.get('input[type=text]').eq(5).type('Ромашка{enter}')
+      cy.get('input[class]').eq(12).type('Широкая')
+      cy.get('input[class]').eq(13).type('3')
+      cy.get('input[type=text]').eq(6).type('ООО')
+      cy.contains('ООО Тестовая компания номер один').click()
+      cy.get('button[type = "submit"]').eq(0).click()
+
+      cy.get('button[type = "button"]').eq(11).click()
+      cy.contains('Добавить отправление').click()
+      cy.get('input[type=text]').eq(5).type('Ромашка{enter}')
+      cy.get('input[class]').eq(12).type('Широкая')
+      cy.get('input[class]').eq(13).type('3')
+      cy.get('input[type=text]').eq(6).type('ООО')
+      cy.contains('ООО Тестовая компания номер один').click()
+      cy.get('button[type = "submit"]').eq(0).click()
+
+      cy.get('button[type = "button"]').eq(11).click()
+      cy.contains('Добавить отправление').click()
+      cy.get('input[type=text]').eq(5).type('Ромашка{enter}')
+      cy.get('input[class]').eq(12).type('Широкая')
+      cy.get('input[class]').eq(13).type('3')
+      cy.get('input[type=text]').eq(6).type('ООО')
+      cy.contains('ООО Тестовая компания номер один').click()
+      cy.get('button[type = "submit"]').eq(0).click()
+
+      cy.get('button[type = "button"]').eq(11).click()
+      cy.contains('Добавить отправление').click()
+      cy.get('input[type=text]').eq(5).type('Ромашка{enter}')
+      cy.get('input[class]').eq(12).type('Широкая')
+      cy.get('input[class]').eq(13).type('3')
+      cy.get('input[type=text]').eq(6).type('ООО')
+      cy.contains('ООО Тестовая компания номер один').click()
+      cy.get('button[type = "submit"]').eq(0).click()
+
+      cy.get('button[type = "button"]').eq(11).click()
+      cy.contains('Добавить отправление').click()
+      cy.get('input[type=text]').eq(5).type('Ромашка{enter}')
+      cy.get('input[class]').eq(12).type('Широкая')
+      cy.get('input[class]').eq(13).type('3')
+      cy.get('input[type=text]').eq(6).type('ООО')
+      cy.contains('ООО Тестовая компания номер один').click()
+      cy.get('button[type = "submit"]').eq(0).click()
+
+      cy.get('button[type = "button"]').eq(11).click()
+      cy.contains('Добавить отправление').click()
+      cy.get('input[type=text]').eq(5).type('Ромашка{enter}')
+      cy.get('input[class]').eq(12).type('Широкая')
+      cy.get('input[class]').eq(13).type('3')
+      cy.get('input[type=text]').eq(6).type('ООО')
+      cy.contains('ООО Тестовая компания номер один').click()
+      cy.get('button[type = "submit"]').eq(0).click()
+
+      cy.get('button[type = "button"]').eq(11).click()
+      cy.contains('Добавить отправление').click()
+      cy.get('input[type=text]').eq(5).type('Ромашка{enter}')
+      cy.get('input[class]').eq(12).type('Широкая')
+      cy.get('input[class]').eq(13).type('3')
+      cy.get('input[type=text]').eq(6).type('ООО')
+      cy.contains('ООО Тестовая компания номер один').click()
+      cy.get('button[type = "submit"]').eq(0).click()
+    })
+})

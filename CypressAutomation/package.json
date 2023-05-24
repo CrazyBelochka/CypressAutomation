@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "start-server-and-test start http-get://localhost:3030 cy:run"
+    "test": "start-server-and-test start http-get://localhost:3030 cy:run",
+    "cy:run": "cypress run",
+    "cy:parallel": "cypress-parallel -s cy:run -t 2 -d cypress/e2e/LK_tests/ -a '\"--record --key 29e2dc13-1397-48cc-985d-b03760858934 --parallel --ci-build-id test20 --browser chrome\"'"
   },
   "author": "roma",
   "license": "ISC",

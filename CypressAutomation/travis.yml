@@ -1,0 +1,13 @@
+# tell Travis we're using Node.js
+language: node_js
+
+# specify which versions of Node to use
+node_js: 10
+
+# run our tests
+script:
+  # or yarn test if you're using Yarn instead of NPM
+  - npm run test
+
+# set the base URL environment variable for Cypress
+env: CYPRESS_BASE_URL=https://example.com
